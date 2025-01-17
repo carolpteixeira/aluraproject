@@ -1,0 +1,34 @@
+let mensagem = 'Boas-vindas ao nosso site';
+console.log(mensagem);
+
+let nome = 'Carolina';
+console.log(` Olá ${nome}`);
+
+alert(`Olá ${nome}`);
+let linguagem = prompt("Qual linguagem de Programação você mais gosta?");
+console.log(mensagem);
+
+let valor1 = 15;
+let valor2 = 4;
+
+let resultado1 = valor1 + valor2;
+console.log(`A soma de ${valor1} e ${valor2} é igual a ${resultado1}`);
+
+let resultado2 = valor1 - valor2;
+console.log(`A diferença entre ${valor1} e ${valor2} é igual a ${resultado2}`);
+
+let idadeUsuario = prompt('Insira sua idade');
+
+idadeUsuario > 18? console.log('Usuário maior de idade') : console.log('Usuário menor de idade');
+
+let numero2 = prompt('Digite um número');
+    if (numero2 == 0) {
+        alert(`O número ${numero2} digitado é nulo`);
+        console.log(`O número ${numero2} digitado é nulo`);
+    }if (numero2 > 0) {
+        alert(`O número ${numero2} digitado é positivo`);
+        console.log(`O número ${numero2} digitado é positivo`);
+    }else {
+        alert(`O número ${numero2} digitado é negativo`);
+        console.log(`O número ${numero2} digitado é negativo`);
+    }
