@@ -17,24 +17,53 @@ if (numero < 0) {
 alert('Vamos jogar o jogo de adivinhar o número');
 let numJogo = 50;
 let cont = 0;
-let pontos = 100/cont;
+let pontos = 0;
+console.log(numJogo);
 
-while (1) {
+while (pontos >= 0 && pontos <= 105) {
 let chute1 = prompt('Chute um número e veja se acertou');
-    }
+
     if (chute1 == numJogo) {
        alert('Parabéns, você acertou');
-       cont +=1 ;
+       cont +=1 ; //contador para o número de jogadas
+       pontos += 100;
        break;
     }
     if (chute1 < numJogo){
         cont+=1;
-        alert(`O número é maior que ${chute1}`);
-    
+            if(chute1 >= numJogo - 5) {
+                alert('Você chegou muito próximo, tente um número maior');
+                pontos+=55;
+           }else {
+                alert('Você está muito longe, o número secreto é maior');
+                pontos-=15; //sistema de ganhos e perdas
+            }
+   
     }else {
         cont+=1;
-        alert(`O número é menor que ${chute1}`);    
+            if(chute1 <= numJogo + 10) {
+                alert('Você chegou muito próximo, tente um número menor');
+                pontos+=55;
+            }
+            else {
+                alert('Você está muito longe, o número secre é menor');
+                pontos-=15;     
     }
 }
-pontos = 100/cont;
-alert('Você fez ' + cont + ' tentativas e ' + pontos + ' pontos' );
+ }
+
+console.log(pontos);
+if (pontos >= 100) {
+    alert('Parabéns, você fez ' + cont + ' tentativas e ' + pontos + ' pontos e ganhou o jogo. ' + numJogo + ' é o némero secreto');
+}
+if (pontos < 100) {
+    alert('Poxa, que pena! Você fez ' + cont + ' tentativas e ' + pontos + ' pontos mas não ganhou o jogo. ' + numJogo + ' é o némero secreto');
+}
+
+let saldo = 1500;
+console.log(saldo);
+alert(`O saldo da conta é ${saldo}`);
+
+let nomeUsuario = prompt('Insira seu nome');
+console.log(nomeUsuario);
+alert(`Boas-vindas ao nosso site, ${nomeUsuario}`);
