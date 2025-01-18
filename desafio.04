@@ -32,3 +32,11 @@ let numero2 = prompt('Digite um número');
         alert(`O número ${numero2} digitado é negativo`);
         console.log(`O número ${numero2} digitado é negativo`);
     }
+let numAleatorio = Math.random() * 10;
+console.log(numAleatorio);
+
+let numAleatorio1 = parseInt(Math.random() * 10 +1);
+console.log(numAleatorio1);
+
+let numAleatorio2 = parseInt(Math.random() * 1000 +1);
+console.log(numAleatorio2);
